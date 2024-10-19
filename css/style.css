@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.py-5{
+    padding-block:50px;
+}
+a{
+    text-decoration: none;
+}
+.w-100{
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.header{
+    background-color: #eee;
+    min-height: 100vh;
+    margin-top: 70px;
+    padding-top: 30px;
+
+}
+.head-content{
+    text-align: center;
+    margin-top: 40px;
+}
+.head-content h2{
+    line-height: 1.5;
+}
+.head-content p{
+    margin-block: 15px;
+}
+.head-content .btns{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+}
+.head-content .watch{
+    display: flex;
+    align-items: center;
+    color: #000;
+    transition: .3s;
+}
+.head-content .watch:hover{
+    color: red;
+}
+.head-content .watch i{
+    transition: .3s;
+}
+.head-content .watch:hover i{
+    color: red;
+}
+.head-content .book{
+    padding: 15px 20px;
+    background-color: red;
+    border-radius: 60px;
+    color: #fff;
+    text-decoration: none;
+}
+.head-content .icons{
+    background-image: linear-gradient(to right , red 0% 50%, transparent 50% 100%);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head-content .icons i{
+    background-color: #fff;
+    padding: 13px;
+    border-radius: 50%;
+    color: #000;
+}
+@media (min-width:768px){
+    .header{
+        margin-top: 50px;
+    }
+
+    .header .container{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 20px;
+    }
+    .head-content{
+        text-align: start;
+    }
+    .head-content .btns{
+        justify-content: flex-start;
+    }
+}
+/* ------------------- Navbar ----------------- */
+.nav{
+    background-color: #fff;
+    padding-block: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+.nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-list{
+    position: fixed;
+    background-color: red;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+}
+.nav ul li{
+    margin-block:30px ;
+    padding: 20px;
+}
+.nav ul i{
+    position: absolute;
+    right: 12px;
+    top: 0;
+    font-size: 20px;
+}
+.nav ul a{
+    color: #000;
+}
+
+@media (min-width:768px){
+    .nav{
+        padding: 0;
+    }
+    .nav .nav-list{
+        position: static;
+        background-color: transparent;
+    }
+    .nav ul{
+        display: flex;
+    }
+    .nav ul i{
+        display: none;
+    }
+    .nav ul li{
+        position: relative;
+        padding:0px ;
+        margin-right:15px ;
+    }
+    .nav ul li::after{
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: red;
+        transition: .3s;
+    }
+    .nav ul li:hover::after{
+        width: 100%;
+    }
+}
+/* ------------------- Cheefs ----------------- */
+.chefs .card{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    border-radius: 7px;
+    margin-bottom: 40px;
+}
+.chefs .card p{
+    margin-block:15px ;
+}
+.card .img{
+    position: relative;
+}
+.card .img svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.card ul{
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    z-index: 20;
+    background-color: red;
+    padding: 12px;
+    transition: .3s;
+}
+.card ul li{
+    margin-bottom: 12px;
+}
+.chefs .card:hover ul{
+    right: 14px;
+}
+
+@media (min-width:768px){
+    .chefs .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .chefs .card{
+        width: 48%;
+        margin-right: 10px;
+    }
+}
+@media (min-width:992px){
+    .chefs .card{
+        width: 32%;
+    }
+}
+/* ------------------- Gallery ----------------- */
+.our-gallery .container{
+    columns: 3;
+}
+.img-wrapper{
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+.img-wrapper img{
+    display: block;
+}
+.img-wrapper .layer{
+    color: #eee;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0,   0   , 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: .3s;
+}
+.img-wrapper:hover .layer{
+    top: 0;
+}
+@media (max-width:991px){
+    .our-gallery .container{
+        columns: 2;
+    }
+}
+@media (max-width:768px){
+    .our-gallery .container{
+        columns: 1;
+    }
+}
+
